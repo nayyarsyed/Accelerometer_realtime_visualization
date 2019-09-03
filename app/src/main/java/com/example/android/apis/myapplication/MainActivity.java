@@ -71,6 +71,8 @@ public class MainActivity extends Activity {
 
         // Start the simulation
         mSimulationView.startSimulation();
+        mSimulationView.setLayoutParams(new FrameLayout.LayoutParams(220, 300));
+
     }
 
     @Override
@@ -90,7 +92,7 @@ public class MainActivity extends Activity {
 
     class SimulationView extends FrameLayout implements SensorEventListener {
         // diameter of the balls in meters
-        private static final float sBallDiameter = 0.0009f;
+        private static final float sBallDiameter = 0.0002f;
         private static final float sBallDiameter2 = sBallDiameter * sBallDiameter;
 
         private final int mDstWidth;
